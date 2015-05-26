@@ -7,6 +7,10 @@ module Dashboard
       @trading_names = @firm.subsidiaries
     end
 
+    def edit
+      @firm = Firm.find(params[:id])
+    end
+
     private
 
     def principal
