@@ -13,9 +13,7 @@ module Dashboard
 
     def update
       @firm = Firm.find(params[:id])
-      if @firm.update(firm_params)
-        flash[:notice] = 'A success message'
-      end
+      @firm.update(firm_params) && flash[:notice] = 'A success message'
       render :edit
     end
 
