@@ -1,0 +1,21 @@
+<fieldset class="form__group">
+  <legend class="l-<%= form_name %>__legend">
+    <%= legend_text %>
+  </legend>
+
+  <p>
+    <%= description_text %>
+  </p>
+
+  <div class="l-<%= form_name %>__row">
+    <% if block %>
+      <div class="l-<%= form_name %>__field">
+        <%= block.call %>
+      </div>
+    <% else %>
+      <div class="l-<%= form_name %>__field form__group-item">
+        <%= standard_field f, field, label: label_text %>
+      </div>
+    <% end %>
+  </div>
+</fieldset>
