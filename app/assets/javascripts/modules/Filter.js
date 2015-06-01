@@ -3,7 +3,7 @@ define(['jquery', 'List', 'ListFuzzySearch'], function($, List, ListFuzzySearch)
   'use strict';
 
   var firmOptions = {
-    valueNames: [ 'frn', 'firm-name', 'principal-name' ],
+    valueNames: [ 'js-frn', 'js-firm-name', 'js-principal-name' ],
     plugins: [ ListFuzzySearch() ]
   };
 
