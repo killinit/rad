@@ -1,4 +1,5 @@
-<div class="l-constrained">
+<div class="l-constrained" id="firm-list">
+  <input class="search" placeholder="Search" />
   <h2><%= t('dashboard.firms_index.firm_heading') %></h2>
   <div class="table-wrapper">
     <table>
@@ -29,12 +30,12 @@
           <th><%= t('dashboard.firms_index.principal_column_heading') %></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="list">
         <% @trading_names.each do |trading_name| %>
           <tr class="t-trading-name-table-row">
-            <td class="t-frn"><%= trading_name.fca_number %></td>
-            <td class="t-firm-name"><%= trading_name.registered_name %></td>
-            <td class="t-principal-name"><%= trading_name.principal.full_name %></td>
+            <td class="frn t-frn"><%= trading_name.fca_number %></td>
+            <td class="firm-name t-firm-name"><%= trading_name.registered_name %></td>
+            <td class="principal-name t-principal-name"><%= trading_name.principal.full_name %></td>
           </tr>
         <% end %>
       </tbody>
