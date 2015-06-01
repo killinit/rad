@@ -1,0 +1,42 @@
+.l-2col-even--collapsed {
+  display: inline;
+  float: left;
+  padding-left: $gutter-width/2;
+  padding-right: $gutter-width/2;
+  width: percentage(1/2);
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+.l-2col-even--collapsed--first {
+  @extend .l-2col-even--collapsed;
+  padding-left: 0;
+}
+
+.l-half-width {
+  float: left;
+  padding-right: $gutter-width/2;
+  width: percentage(1/2);
+}
+
+.l-3col-even--collapsed {
+  display: inline;
+  float: left;
+  padding-left: $gutter-width/2;
+  padding-right: $gutter-width/2;
+  width: percentage(1/3);
+
+  &:first-of-type {
+    padding-left: 0;
+  }
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+}

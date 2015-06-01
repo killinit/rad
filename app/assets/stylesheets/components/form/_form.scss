@@ -5,3 +5,18 @@
 .form__input-container--medium {
   max-width: 140px;
 }
+
+%form-row-2up {
+  float: left;
+  padding-right: $baseline-unit*2;
+  width: 50%;
+}
+
+.form__row--2up {
+  @extend %form-row-2up;
+}
+
+.form__row--2up--last {
+  @extend %form-row-2up;
+  padding-right: 0;
+}
