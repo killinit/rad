@@ -1,5 +1,7 @@
-<%= render_breadcrumbs [{ locale_key: 'dashboard.navigation.root', url: dashboard_root_path },
-                        { locale_key: 'dashboard.navigation.firms' }] %>
+<%= render_breadcrumbs do |crumbs|
+  crumbs.add 'dashboard.navigation.root', dashboard_root_path
+  crumbs.add 'dashboard.navigation.firms'
+end %>
 
 <div class="l-constrained">
   <h2><%= t('dashboard.firms_index.firm_heading') %></h2>

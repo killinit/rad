@@ -4,7 +4,20 @@ module ApplicationHelper
     content_tag :div, form.validation_summary, class: 't-devise-form-errors'
   end
 
-  def render_breadcrumbs(crumbs)
-    render 'shared/breadcrumbs', breadcrumbs: crumbs
+  def render_breadcrumbs(&builder_block)
+    crumb_builder = (Class.new do
+      def add(locale_key, url = :no_path)
+        crumb = { locale_key: locale_key }
+        crumb[:url] = url unless url == :no_path
+        crumbs.push(crumb)
+      end
+
+      def crumbs
+        (@crumbs ||= [])
+      end
+    end).new
+
+    builder_block.call(crumb_builder)
+    render 'shared/breadcrumbs', breadcrumbs: crumb_builder.crumbs
   end
 end
