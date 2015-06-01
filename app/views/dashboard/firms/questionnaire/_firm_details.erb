@@ -1,6 +1,10 @@
 <div class="l-2col-even--collapsed--first">
   <fieldset class="form__group form-section__group">
-    <legend class="form-section__group__heading"><%= t('dashboard.firm_edit.contact_details_heading') %></legend>
+    <% if f.object.trading_name? %>
+      <legend class="form-section__group__heading"><%= t('dashboard.firm_edit.trading_name_contact_details_heading') %></legend>
+    <% else %>
+      <legend class="form-section__group__heading"><%= t('dashboard.firm_edit.firm_contact_details_heading') %></legend>
+    <% end %>
 
     <%= f.form_row html_options: {classes: 'form__row--2up'} do %>
       <div class="form__label-heading"><%= t('questionnaire.registered_name.label') %></div>

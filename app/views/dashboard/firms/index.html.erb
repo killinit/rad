@@ -37,7 +37,11 @@
         <% @trading_names.each do |trading_name| %>
           <tr class="t-trading-name-table-row">
             <td class="t-frn"><%= trading_name.fca_number %></td>
-            <td class="t-firm-name"><%= trading_name.registered_name %></td>
+            <td class="t-firm-name">
+              <%= link_to edit_dashboard_trading_name_path(trading_name), class: 't-edit-link' do %>
+                <%= trading_name.registered_name %>
+              <% end %>
+            </td>
             <td class="t-principal-name"><%= trading_name.principal.full_name %></td>
           </tr>
         <% end %>
