@@ -30,11 +30,10 @@
   margin-top: 44px;
   margin-left: 0.5em;
   padding: 0.5em;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-border: 2px solid  $color-firm-list-border-grey;
-
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 2px solid  $color-firm-list-border-grey;
 }
 
 #firm-list h2 {float: left;}
