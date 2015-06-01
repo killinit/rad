@@ -24,7 +24,9 @@ gem 'dough-ruby',
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'letter_opener', group: :development
-gem 'mas-rad_core', '0.0.53'
+gem 'mas-rad_core',
+    github: 'moneyadviceservice/mas-rad_core',
+    branch: 'refactor/gradual_rename_subs_to_trading_names'
 gem 'oga'
 gem 'pg'
 gem 'ransack'
