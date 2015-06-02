@@ -6,5 +6,5 @@ define(['jquery', 'List', 'ListFuzzySearch'], function($, List, ListFuzzySearch)
     plugins: [ListFuzzySearch()]
   };
 
-  var firmList = new List('firm-list', firmOptions);
+  new List('firm-list', firmOptions);
 });
